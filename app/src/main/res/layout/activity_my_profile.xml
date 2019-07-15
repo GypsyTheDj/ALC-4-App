@@ -61,12 +61,12 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:fontFamily="@font/aclonica"
-            android:gravity="center"
+            android:gravity="start"
             android:paddingStart="60sp"
             android:paddingLeft="20sp"
             android:paddingRight="10sp"
             android:text="Track :  Android"
-            android:textAlignment="textStart"
+            android:textAlignment="viewStart"
             android:textColor="@android:color/black"
             android:textSize="17sp" />
 
@@ -75,12 +75,12 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:fontFamily="@font/aclonica"
-            android:gravity="center"
+            android:gravity="start"
             android:paddingStart="60sp"
             android:paddingLeft="20sp"
             android:paddingRight="10sp"
             android:text="Country :  Kenya"
-            android:textAlignment="textStart"
+            android:textAlignment="viewStart"
             android:textColor="@android:color/black"
             android:textSize="17sp" />
 
@@ -89,12 +89,12 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:fontFamily="@font/aclonica"
-            android:gravity="center"
+            android:gravity="start"
             android:paddingStart="60sp"
             android:paddingLeft="20sp"
             android:paddingRight="10sp"
             android:text="Email : gypsythedj@gmail.com"
-            android:textAlignment="textStart"
+            android:textAlignment="viewStart"
             android:textColor="@android:color/black"
             android:textSize="17sp" />
 
@@ -103,12 +103,12 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:fontFamily="@font/aclonica"
-            android:gravity="center"
+            android:gravity="start"
             android:paddingStart="60sp"
             android:paddingLeft="20sp"
             android:paddingRight="10sp"
             android:text="Phone No. : +254724920601"
-            android:textAlignment="textStart"
+            android:textAlignment="viewStart"
             android:textColor="@android:color/black"
             android:textSize="17sp" />
 
@@ -117,12 +117,12 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:fontFamily="@font/aclonica"
-            android:gravity="center"
+            android:gravity="start"
             android:paddingStart="60sp"
             android:paddingLeft="20sp"
             android:paddingRight="10sp"
             android:text="Slack Username : @Norman"
-            android:textAlignment="textStart"
+            android:textAlignment="viewStart"
             android:textColor="@android:color/black"
             android:textSize="17sp" />
 
@@ -130,9 +130,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="3dp"
             android:layout_marginRight="15dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="3dp"
             android:orientation="horizontal"
             android:paddingStart="5sp"
             android:paddingLeft="5sp"
@@ -148,6 +148,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/follow_button"
+                android:clickable="true"
                 android:text="Follow"
                 android:textColor="@color/colorWhite" />
 
@@ -157,6 +158,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/message_button"
+                android:clickable="true"
                 android:text="Message"
                 android:textColor="@color/colorWhite" />
 

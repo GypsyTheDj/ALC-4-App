@@ -5,7 +5,7 @@
     android:id="@+id/Constraintlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/transparent"
+    android:background="@android:color/white"
     android:backgroundTintMode="screen"
     android:fadingEdge="vertical"
     android:textAlignment="textStart"
@@ -22,16 +22,17 @@
         android:fontFamily="@font/stardos_stencil_bold"
         android:gravity="center"
         android:text="Welcome To ALC 4.0"
+        android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="36sp"
         android:textStyle="bold"
         android:typeface="serif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="0.619"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.02" />
 
     <Button
         android:id="@+id/btnwebview"
@@ -50,8 +51,7 @@
         app:layout_constraintEnd_toEndOf="@+id/welcometxt"
         app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="@+id/welcometxt"
-        app:layout_constraintTop_toBottomOf="@+id/welcometxt"
-        app:layout_constraintVertical_bias="0.546" />
+        app:layout_constraintTop_toBottomOf="@+id/welcometxt" />
 
     <Button
         android:id="@+id/btnmyprofile"
@@ -72,12 +72,12 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnwebview"
         app:layout_constraintTop_toTopOf="@+id/welcometxt"
-        app:layout_constraintVertical_bias="0.774" />
+        app:layout_constraintVertical_bias="0.769" />
 
     <TextView
         android:id="@+id/textViewInfo"
-        android:layout_width="351dp"
-        android:layout_height="216dp"
+        android:layout_width="367dp"
+        android:layout_height="177dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
@@ -93,6 +93,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.239" />
+        app:layout_constraintVertical_bias="0.255" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="342dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.996"
+        app:srcCompat="@drawable/alcflyer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

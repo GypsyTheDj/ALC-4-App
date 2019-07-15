@@ -25,7 +25,7 @@ public class AboutAlc extends AppCompatActivity {
 
         superProgressBar.setMax(100);
 
-        superWebView.loadUrl("https://androidstudy.com");
+        superWebView.loadUrl("https://andela.com/alc/");
         superWebView.setWebChromeClient(new WebChromeClient());
         superWebView.setWebViewClient(new MyAppWebViewClient());
         superWebView.getSettings().setJavaScriptEnabled(true);
