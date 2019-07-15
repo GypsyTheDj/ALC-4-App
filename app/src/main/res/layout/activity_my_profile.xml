@@ -6,226 +6,246 @@
     android:layout_height="match_parent"
     android:background="@android:color/darker_gray"
     android:layoutMode="clipBounds"
+    android:theme="@style/Base.Theme.MaterialComponents"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/textViewMyslackname"
-        android:layout_width="193dp"
-        android:layout_height="43dp"
-        android:layout_alignStart="@+id/myIcon"
-        android:layout_alignEnd="@+id/myIcon"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="133dp"
-        android:layout_marginEnd="-55dp"
-        android:layout_marginBottom="24dp"
-        android:gravity="center"
-        android:text="@NormanNuthu"
-        android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
-        android:textSize="12sp"
-        android:textStyle="normal"
-        android:typeface="monospace" />
-
-    <TextView
-        android:id="@+id/textViewTrack7"
-        android:layout_width="162dp"
-        android:layout_height="36dp"
-        android:layout_alignStart="@+id/myIcon"
-        android:layout_alignEnd="@+id/myIcon"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="-63dp"
-        android:layout_marginEnd="172dp"
-        android:layout_marginBottom="229dp"
-        android:gravity="center"
-        android:text="Track :"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/black"
-        android:textSize="12sp"
-        android:textStyle="normal|bold"
-        android:typeface="monospace" />
-
-    <TextView
-        android:id="@+id/textViewAndroid7"
-        android:layout_width="205dp"
-        android:layout_height="40dp"
-        android:layout_alignStart="@+id/myIcon"
-        android:layout_alignEnd="@+id/myIcon"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="121dp"
-        android:layout_marginEnd="-55dp"
-        android:layout_marginBottom="227dp"
-        android:gravity="center"
-        android:text="Android"
-        android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
-        android:textSize="12sp"
-        android:textStyle="normal"
-        android:typeface="monospace" />
-
-    <TextView
-        android:id="@+id/textViewEmail"
-        android:layout_width="162dp"
-        android:layout_height="35dp"
-        android:layout_alignStart="@+id/myIcon"
-        android:layout_alignEnd="@+id/myIcon"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="-61dp"
-        android:layout_marginEnd="170dp"
-        android:layout_marginBottom="128dp"
-        android:gravity="center"
-        android:text="Email :"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/black"
-        android:textSize="12sp"
-        android:textStyle="normal|bold"
-        android:typeface="monospace" />
-
-    <TextView
-        android:id="@+id/textViewMyemail"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_alignStart="@+id/myIcon"
-        android:layout_alignEnd="@+id/myIcon"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="111dp"
-        android:layout_marginEnd="-53dp"
-        android:layout_marginBottom="128dp"
-        android:gravity="center"
-        android:text="gypsythedj@gmail.com"
-        android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
-        android:textSize="12sp"
-        android:textStyle="normal"
-        android:typeface="monospace" />
-
-    <TextView
-        android:id="@+id/textViewSlack"
-        android:layout_width="185dp"
-        android:layout_height="35dp"
-        android:layout_alignStart="@+id/myIcon"
-        android:layout_alignEnd="@+id/myIcon"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="-63dp"
-        android:layout_marginEnd="149dp"
-        android:layout_marginBottom="29dp"
-        android:gravity="center"
-        android:text="Slack Username :"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/black"
-        android:textSize="12sp"
-        android:textStyle="normal|bold"
-        android:typeface="monospace" />
-
-    <TextView
-        android:id="@+id/textViewCountry"
-        android:layout_width="165dp"
-        android:layout_height="37dp"
-        android:layout_alignStart="@+id/myIcon"
-        android:layout_alignEnd="@+id/myIcon"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="-61dp"
-        android:layout_marginEnd="167dp"
-        android:layout_marginBottom="179dp"
-        android:gravity="center"
-        android:text="Country :"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/black"
-        android:textSize="12sp"
-        android:textStyle="normal|bold"
-        android:typeface="monospace" />
-
-    <TextView
-        android:id="@+id/textViewKenya"
-        android:layout_width="214dp"
-        android:layout_height="35dp"
-        android:layout_alignStart="@+id/myIcon"
-        android:layout_alignEnd="@+id/myIcon"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="112dp"
-        android:layout_marginEnd="-55dp"
-        android:layout_marginBottom="181dp"
-        android:gravity="center"
-        android:text="Kenya"
-        android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
-        android:textSize="12sp"
-        android:textStyle="normal"
-        android:typeface="monospace" />
 
     <ImageView
         android:id="@+id/myIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="406dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="70dp"
+        android:layout_marginStart="19dp"
         android:layout_marginLeft="70dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="70dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="31dp"
         android:layout_marginRight="70dp"
-        android:layout_marginBottom="320dp"
-        android:scaleType="centerCrop"
+        android:layout_marginBottom="392dp"
+        android:scaleType="fitCenter"
         app:srcCompat="@drawable/male_icon" />
 
     <TextView
-        android:id="@+id/textViewNumber"
-        android:layout_width="wrap_content"
+        android:id="@+id/textViewName"
+        android:layout_width="234dp"
         android:layout_height="38dp"
         android:layout_alignStart="@+id/myIcon"
         android:layout_alignEnd="@+id/myIcon"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="-63dp"
-        android:layout_marginEnd="167dp"
-        android:layout_marginBottom="77dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="352dp"
+        android:fontFamily="@font/aclonica"
         android:gravity="center"
-        android:text="Phone :"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/black"
-        android:textSize="12sp"
-        android:textStyle="normal|bold"
-        android:typeface="monospace" />
-
-    <TextView
-        android:id="@+id/textViewPhone"
-        android:layout_width="215dp"
-        android:layout_height="39dp"
-        android:layout_alignStart="@+id/myIcon"
-        android:layout_alignEnd="@+id/myIcon"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="113dp"
-        android:layout_marginEnd="-57dp"
-        android:layout_marginBottom="76dp"
-        android:gravity="center"
-        android:text="0724920601"
-        android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
-        android:textSize="12sp"
-        android:textStyle="normal"
-        android:typeface="monospace" />
-
-    <TextView
-        android:id="@+id/textViewName"
-        android:layout_width="275dp"
-        android:layout_height="36dp"
-        android:layout_alignStart="@+id/myIcon"
-        android:layout_alignEnd="@+id/myIcon"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="-2dp"
-        android:layout_marginEnd="-2dp"
-        android:layout_marginBottom="274dp"
-        android:gravity="center"
+        android:paddingStart="10sp"
+        android:paddingLeft="10sp"
+        android:paddingEnd="10sp"
+        android:paddingRight="10sp"
         android:text="Norman Nuthu"
         android:textAlignment="center"
         android:textColor="@android:color/holo_red_dark"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="normal|bold"
         android:typeface="serif" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="348dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:fontFamily="@font/aclonica"
+            android:gravity="center"
+            android:paddingStart="60sp"
+            android:paddingLeft="20sp"
+            android:paddingRight="10sp"
+            android:text="Track :  Android"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/textViewCountry3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:fontFamily="@font/aclonica"
+            android:gravity="center"
+            android:paddingStart="60sp"
+            android:paddingLeft="20sp"
+            android:paddingRight="10sp"
+            android:text="Country :  Kenya"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/textViewEmail"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:fontFamily="@font/aclonica"
+            android:gravity="center"
+            android:paddingStart="60sp"
+            android:paddingLeft="20sp"
+            android:paddingRight="10sp"
+            android:text="Email : gypsythedj@gmail.com"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/textViewPhone"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:fontFamily="@font/aclonica"
+            android:gravity="center"
+            android:paddingStart="60sp"
+            android:paddingLeft="20sp"
+            android:paddingRight="10sp"
+            android:text="Phone No. : +254724920601"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/textViewSlack"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:fontFamily="@font/aclonica"
+            android:gravity="center"
+            android:paddingStart="60sp"
+            android:paddingLeft="20sp"
+            android:paddingRight="10sp"
+            android:text="Slack Username : @Norman"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="17sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:paddingStart="5sp"
+            android:paddingLeft="5sp"
+            android:paddingTop="5sp"
+            android:paddingEnd="5sp"
+            android:paddingRight="5sp"
+            android:paddingBottom="5sp"
+            android:weightSum="2">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/follow_button"
+                android:text="Follow"
+                android:textColor="@color/colorWhite" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/message_button"
+                android:text="Message"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="99dp"
+            android:layout_alignStart="@id/textViewSlack"
+            android:layout_marginBottom="25sp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:paddingStart="10sp"
+            android:paddingLeft="15sp"
+            android:paddingTop="10sp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="80dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    app:backgroundTint="@android:color/white"
+                    app:elevation="1dp"
+                    app:fabSize="normal"
+                    app:rippleColor="@color/colorGrey"
+                    app:srcCompat="@drawable/icon_facebook" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="80dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    app:backgroundTint="@android:color/white"
+                    app:elevation="1dp"
+                    app:fabSize="normal"
+                    app:rippleColor="@color/colorGrey"
+                    app:srcCompat="@drawable/icon_whatsapp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="80dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    app:backgroundTint="@android:color/white"
+                    app:elevation="1dp"
+                    app:fabSize="normal"
+                    app:rippleColor="@color/colorGrey"
+                    app:srcCompat="@drawable/icon_youtube" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="80dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    app:backgroundTint="@android:color/white"
+                    app:elevation="1dp"
+                    app:fabSize="normal"
+                    app:rippleColor="@color/colorGrey"
+                    app:srcCompat="@drawable/icon_linkedn" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 
 </RelativeLayout>

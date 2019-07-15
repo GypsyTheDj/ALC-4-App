@@ -2,7 +2,7 @@ package com.example.alc4intro;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.widget.ImageView;
@@ -27,6 +27,7 @@ public class AboutAlc extends AppCompatActivity {
 
         superWebView.loadUrl("https://androidstudy.com");
         superWebView.setWebChromeClient(new WebChromeClient());
+        superWebView.setWebViewClient(new MyAppWebViewClient());
         superWebView.getSettings().setJavaScriptEnabled(true);
         superWebView.setWebChromeClient(new WebChromeClient(){
 

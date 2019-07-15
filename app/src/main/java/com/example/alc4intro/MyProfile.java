@@ -1,6 +1,6 @@
 package com.example.alc4intro;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MyProfile extends AppCompatActivity {
