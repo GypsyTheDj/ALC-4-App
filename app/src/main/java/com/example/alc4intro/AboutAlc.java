@@ -1,62 +1,58 @@
 package com.example.alc4intro;
 
-import android.graphics.Bitmap;
+import android.content.Intent;
+import android.net.Uri;
+import android.net.http.SslError;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import android.webkit.WebChromeClient;
+import android.view.View;
+import android.webkit.SslErrorHandler;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
+import android.webkit.WebViewClient;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class AboutAlc extends AppCompatActivity {
 
-    ProgressBar superProgressBar;
-    ImageView superImageView;
-    WebView superWebView;
+
+    private static final String URL = "http://www.andela.com/alc/";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_alc);
 
-        superProgressBar = findViewById(R.id.myProgressBar);
-        superImageView = findViewById(R.id.myImageView);
-        superWebView = findViewById(R.id.myWebView);
+        WebView myWebView = findViewById(R.id.myWebView);
 
-        superProgressBar.setMax(100);
-
-        superWebView.loadUrl("https://andela.com/alc/");
-        superWebView.setWebChromeClient(new WebChromeClient());
-        superWebView.setWebViewClient(new MyAppWebViewClient());
-        superWebView.getSettings().setJavaScriptEnabled(true);
-        superWebView.setWebChromeClient(new WebChromeClient(){
-
-            @Override
-            public void onProgressChanged(WebView view, int newProgress) {
-                super.onProgressChanged(view, newProgress);
-                superProgressBar.setProgress(newProgress);
-            }
-
-            @Override
-            public void onReceivedTitle(WebView view, String title) {
-                super.onReceivedTitle(view, title);
-                (getSupportActionBar()).setTitle(title);
-            }
-
-            @Override
-            public void onReceivedIcon(WebView view, Bitmap icon) {
-                super.onReceivedIcon(view, icon);
-                superImageView.setImageBitmap(icon);
-            }
-        });
+        WebSettings settings = myWebView.getSettings();
+        myWebView.getSettings();
+        myWebView.setWebViewClient(new MyWebViewClient());
+        settings.setDomStorageEnabled(true);
+        myWebView.getSettings().setAllowFileAccess( true );
+        myWebView.getSettings().setAppCacheEnabled( true );
+        myWebView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+        myWebView.getSettings().setUseWideViewPort(true);
+        myWebView.getSettings().setLoadWithOverviewMode(true);
+        myWebView.loadUrl(URL);
     }
-    @Override
-    public void onBackPressed() {
-        if(superWebView.canGoBack()) {
-            superWebView.goBack();
-        } else {
-            super.onBackPressed();
+
+    private class MyWebViewClient extends WebViewClient {
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            if (Uri.parse(url).getHost().equals(URL)) {
+                return false;
+            }
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+            return true;
+        }
+
+        @Override
+        public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
+            super.onReceivedSslError(view, handler, error);
+            handler.proceed();
         }
     }
-
 }
+
+
