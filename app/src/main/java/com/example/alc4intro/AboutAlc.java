@@ -33,6 +33,8 @@ public class AboutAlc extends AppCompatActivity {
         myWebView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
         myWebView.getSettings().setUseWideViewPort(true);
         myWebView.getSettings().setLoadWithOverviewMode(true);
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
         myWebView.loadUrl(URL);
     }
 
