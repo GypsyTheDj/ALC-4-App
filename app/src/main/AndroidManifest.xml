@@ -33,7 +33,6 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <meta-data android:name="android.webkit.WebView.EnableSafeBrowsing"
             android:value="true" />
     </application>
 
