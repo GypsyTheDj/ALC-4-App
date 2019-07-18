@@ -7,11 +7,6 @@
     tools:context=".AboutAlc">
 
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"/>
-
     <WebView
         android:id="@+id/myWebView"
         android:layout_alignParentStart="true"
