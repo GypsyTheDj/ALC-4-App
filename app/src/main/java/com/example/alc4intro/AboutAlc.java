@@ -9,6 +9,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +18,7 @@ public class AboutAlc extends AppCompatActivity {
 
     ProgressBar superProgressBar;
     ImageView superImageView;
+    LinearLayout superLinearLayout;
 
 
     private String URL = "https://andela.com/alc";
@@ -28,16 +30,30 @@ public class AboutAlc extends AppCompatActivity {
 
         superProgressBar = findViewById(R.id.myProgressBar);
         superImageView = findViewById(R.id.myImageView);
+        superLinearLayout = findViewById(R.id.myLinearLayout);
         WebView myWebView = findViewById(R.id.myWebView);
 
         superProgressBar.setMax(100);
 
-        myWebView.setWebViewClient(new MyWebViewClient());
         myWebView.getSettings().setAllowFileAccess(true);
         myWebView.getSettings().setAppCacheEnabled(true);
         myWebView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
         myWebView.getSettings().setUseWideViewPort(true);
         myWebView.getSettings().setLoadWithOverviewMode(true);
+        myWebView.setWebViewClient(new MyWebViewClient(){
+
+            @Override
+            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+                superLinearLayout.setVisibility(View.VISIBLE);
+                super.onPageStarted(view, url, favicon);
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                superLinearLayout.setVisibility(View.GONE);
+                super.onPageFinished(view, url);
+            }
+        });
 
         myWebView.loadUrl(URL);
 
@@ -50,18 +66,14 @@ public class AboutAlc extends AppCompatActivity {
             }
 
             @Override
-            public void onReceivedTitle(WebView view, String title) {
-                super.onReceivedTitle(view, title);
-                getSupportActionBar().setTitle(title);
-            }
-
-            @Override
             public void onReceivedIcon(WebView view, Bitmap icon) {
                 super.onReceivedIcon(view, icon);
                 superImageView.setImageBitmap(icon);
             }
         });
+
     }
+
 
     private class MyWebViewClient extends WebViewClient {
         @Override
